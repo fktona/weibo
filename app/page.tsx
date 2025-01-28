@@ -184,10 +184,12 @@ function HeroSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <button className="lg:px-6 px-3 py-4 lg:text-[17px] font-inter text-[14px] bg-[#EA8010] text-white rounded-full hover:bg-[#EA8010]/90 transition-colors">
-            Learn More
+            <a href="#about">Learn More</a>
           </button>
           <button className="lg:px-6 px-3 py-4 lg:text-[17px] text-[14px] font-inter border border-white rounded-full  hover:bg-white/10 transition-colors">
-            Explore the AI Space
+            <a href="https://gitee.com/RUI25/rui" target="_blank">
+              Explore the AI Space
+            </a>
           </button>
         </motion.div>
         {/* <div className="absolute font-inter bottom-0 left-0 max-w-6xl overflow-x-auto gap-3 mx-auto w-full right-0 flex justify-between mb-8">
