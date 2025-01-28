@@ -254,7 +254,7 @@ function AboutSection() {
         </motion.h2>
         <div className="flex justify-between flex-col lg:flex-row lg:items-center gap-5">
           <motion.p
-            className="text-white mb-8  font-medium max-w-[50%]  text-[22px]"
+            className="text-white mb-8  font-medium lg:max-w-[50%]  text-[22px]"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -543,7 +543,7 @@ function DocumentationSection() {
             ))}
           </motion.div>
           <motion.div
-            className=" min-w-[520px] h-full col-span-1  backdrop-blur-lg rounded-[25px] object-cover"
+            className=" min-w-[520px] md:h-full h-[50vh] col-span-1  backdrop-blur-lg rounded-[25px] object-cover"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.5 }}
