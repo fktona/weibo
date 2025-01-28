@@ -5,7 +5,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 const neue = localFont({
-  src: "./fonts/NeueBold.otf",
+  src: "./fonts/Neue.otf",
   variable: "--font-neue",
 });
 
