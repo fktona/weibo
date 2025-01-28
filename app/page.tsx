@@ -618,7 +618,7 @@ function TokenomicsSection() {
                 }
                 transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
               >
-                <div className="flex  justify-start  lg:text-[30px] text-[18px] gap-2">
+                <div className="flex  justify-start  lg:text-[30px] text-[25px] gap-2">
                   <div className="font-medium  flex items-center justify-center gap-2">
                     <div
                       className="lg:w-5 lg:h-7 w-4 h-5 text-[30px] mr-2 rounded-full "
@@ -630,7 +630,7 @@ function TokenomicsSection() {
                   </div>
                   <div className=" text-white">{item.value}</div>
                 </div>
-                <p className="lg:text-[22px] text-[13px] px-8">
+                <p className="lg:text-[22px] text-[20px] px-8">
                   {item.content}
                 </p>
               </motion.div>
@@ -709,7 +709,7 @@ function FaqSection() {
                     <PlusIcon size={28} />
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="px-6 py-4 text-gray-300">
+                <AccordionContent className="px-6 py-4 text-[18px] text-gray-300">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
