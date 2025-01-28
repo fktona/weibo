@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Github, Mail, Menu, Twitter, X } from "lucide-react";
+import { Github, Mail, Menu, Twitter, X } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {
@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen  overflow-x-hidden  bg-[#131219] text-white">
+    <main className="min-h-screen font-neue  overflow-x-hidden  bg-[#131219] text-white">
       <Header />
       <HeroSection />
       <AboutSection />
@@ -314,7 +314,7 @@ function DocumentationSection() {
   return (
     <section
       ref={ref}
-      className=" lg:px-[100px] 2xl:px-[136px]   py-20 px-4  bg-[#EA8010]"
+      className=" lg:px-[100px] font-neue 2xl:px-[136px]   py-20 px-4  bg-[#EA8010]"
     >
       <div className=" max-w-6xl mx-auto flex flex-col items-center ">
         <button className="px-10 py-3 border border-white rounded-full mb-2  w-fit hover:bg-white/10 transition-colors">
