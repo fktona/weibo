@@ -70,7 +70,9 @@ function Header() {
 
         <div className="flex items-center gap-4">
           <button className="px-4 py-2 hidden md:block bg-[#EA8010] text-white rounded-full hover:bg-[#EA8010]/90 transition-colors">
-            Get Started
+            <a href="https://gitee.com/RUI25/rui" target="_blank">
+              Get Started
+            </a>
           </button>
 
           <button
@@ -279,7 +281,7 @@ function AboutSection() {
           >
             Learn more (了解更多)
           </motion.button>
-          <div className="grid  grid-cols-2 gap-2 w-full">
+          <div className="grid  grid-cols-2 gap-2 w-full max-w-[453px]">
             {Array(4)
               .fill(null)
               .map((_, i) => (
