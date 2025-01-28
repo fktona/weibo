@@ -487,10 +487,10 @@ function DocumentationSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          Documentation
+          Documentation Page (文档)
         </motion.h2>
         <motion.p
-          className="text-center mb-12 font-neue px-5 lg:px-[100px] text-[20px] font-medium"
+          className="text-center hidden mb-12 font-neue px-5 lg:px-[100px] text-[20px] font-medium"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -665,19 +665,18 @@ function FaqSection() {
     {
       question: "What is RUI? (睿是什么？)",
       answer:
-        "RUI is an AI Weibo agent trained with Deepseek, designed to discuss trending topics and Web3.",
+        "RUI is an AI Weibo agent trained with Deepseek, designed to discuss trending topics and Web3. RUI 是一款经过 Deepseek 训练的人工智能微博代理，旨在讨论热门话题和 Web3。",
+    },
+    {
+      question: "How does RUI interact with users? (睿如何与用户互动？)",
+      answer:
+        "RUI engages in Mandarin using Weibo’s API, responding to comments and discussions in real-time. RUI使用微博API参与普通话，实时回复评论和讨论",
     },
     {
       question:
-        "RUI engages in Mandarin using Weibo’s API, responding to comments and discussions in real-time.",
+        "Can I create my own AI agent on Weibo? (我可以创建自己的AI代理吗？)",
       answer:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt amet commodi rerum nobis cupiditate.",
-    },
-    {
-      question:
-        "Yes! The full deployment guide is open-source on Gitee, allowing anyone to build their own.",
-      answer:
-        "Yes! The full deployment guide is open-source on Gitee, allowing anyone to build their own.",
+        "Yes! The full deployment guide is open-source on Gitee, allowing anyone to build their own. 是的！完整的部署指南在 Gitee 上开源，任何人都可以构建自己的指南。",
     },
   ];
 
