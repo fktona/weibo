@@ -29,10 +29,10 @@ export default function Home() {
 }
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: "#about", label: "About" },
+  { href: "#docs", label: "Documentation" },
+  { href: "#token", label: "Tokenomics" },
+  { href: "#integrate", label: "Integrate" },
 ];
 
 function Header() {
@@ -40,8 +40,10 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 py-4">
-      <div className="flex items-center justify-between px-4 py-4 bg-white/20 backdrop-blur-md border border-white/[0.18] rounded-3xl">
-        <div className="text-[30px] font-bold font-neue">RUI</div>
+      <div className="flex items-center justify-between px-4 md:px-10 md:py-4 py-2 bg-white/20 backdrop-blur-md border border-white/[0.18] rounded-3xl">
+        <div className="text-[30px] lg:font-bold font-neue">
+          <a href="#"> RUI</a>
+        </div>
 
         <nav className="hidden md:flex items-center gap-8 2xl:gap-[64px]">
           {navItems.map((item) => (
@@ -78,6 +80,13 @@ function Header() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black z-40 flex flex-col gap-6 items-center justify-center"
           >
+            <button
+              className="md:hidden z-50 absolute top-16  border border-white p-1 rounded-full"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              <X className="h-8 w-8 text-white" />
+            </button>
             {navItems.map((item, index) => (
               <motion.div
                 key={item.href}
@@ -118,6 +127,7 @@ function HeroSection() {
 
   return (
     <section
+      id="home"
       ref={ref}
       className="min-h-dvh flex items-center justify-center relative px-4"
     >
@@ -198,6 +208,7 @@ function AboutSection() {
 
   return (
     <section
+      id="about"
       ref={ref}
       className="min-h-dvh items-center bg-landing overflow-y-hidden  lg:px-[100px] 2xl:px-[136px] flex relative isolate  px-4 py-20"
     >
@@ -256,6 +267,7 @@ function IntegrationSection() {
 
   return (
     <section
+      id="integrate"
       ref={ref}
       className="min-h-screen bg-landing flex flex-col items-center justify-center px-4 py-20"
     >
@@ -314,6 +326,7 @@ function DocumentationSection() {
   return (
     <section
       ref={ref}
+      id="docs"
       className=" lg:px-[100px] font-neue 2xl:px-[136px]   py-20 px-4  bg-[#EA8010]"
     >
       <div className=" max-w-6xl mx-auto flex flex-col items-center ">
@@ -364,7 +377,7 @@ function TokenomicsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 isolate px-4 relative">
+    <section id="token" ref={ref} className="py-20 isolate px-4 relative">
       <div className="">
         <motion.div
           className="flex items-center gap-20  flex-col lg:flex-row px-5 justify-between relative isolate max-w-6xl mx-auto w-full"
