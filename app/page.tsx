@@ -683,7 +683,7 @@ function FaqSection() {
   return (
     <section className="min-h-dvh relative flex isolate flex-col items-center justify-center w-full bg-[#131219] px-4 py-32 mt-[85px]">
       <div className="w-full max-w-6xl mx-auto pb-12 relative isolate">
-        <div className="w-full h-full flex justify-center  -z-10 items-center absolute  max-h-[550px] max-w-2xl mx-auto rounded-[25px] backdrop-blur-lg">
+        {/* <div className="w-full h-full flex justify-center  -z-10 items-center absolute  max-h-[550px] max-w-2xl mx-auto rounded-[25px] backdrop-blur-lg">
           <Image
             src="/img2.svg"
             alt="Integration Preview"
@@ -692,7 +692,7 @@ function FaqSection() {
             height={1080}
             className="object-cover  w-[50%] -z-10 max-h-[550px]  max-w-6xl mx-auto h-[50%] blur-[200px]"
           />
-        </div>
+        </div> */}
         <motion.h2 className="text-4xl font-bold mb-12 text-white text-center">
           Frequently Asked Questions
         </motion.h2>
