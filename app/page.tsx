@@ -428,7 +428,7 @@ function IntegrationSection() {
           height={1080}
           className="object-cover absolute w-[50%] -z-10 max-h-[350px]  max-w-6xl mx-auto h-[50%] blur-[200px]"
         />
-        <div className="relative z-10 w-full h-full max-w-6xl mx-auto grid  grid-cols-1 lg:grid-cols-3 items-center justify-center gap-8">
+        <div className="relative z-10 w-fit h-full max-w-6xl mx-auto grid  grid-cols-1 lg:grid-cols-3 items-center justify-center gap-4 place-items-center">
           {[
             {
               img: "c1.png",
@@ -446,7 +446,7 @@ function IntegrationSection() {
               desc: "Open-source the deployment method, ensuring accessibility for developers.",
             },
           ].map((item, i) => (
-            <div className="px-5 rounded-xl bg-[#D9D9D914] min-h-[400px] p-4 backdrop-blur-lg justify-between flex flex-col items-center gap-2">
+            <div className="px-5 rounded-xl max-w-[338px] bg-[#D9D9D914] min-h-[400px] p-4 backdrop-blur-lg justify-between flex flex-col items-center gap-2">
               <Image
                 key={i}
                 src={`/${item.img}`}
@@ -458,7 +458,7 @@ function IntegrationSection() {
               <p className="font-semibold font-inter text-[30px]">
                 {item.title}
               </p>
-              <p className="text-sm font-neue">{item.desc}</p>
+              <p className="text-sm lg:text-[18px] font-neue">{item.desc}</p>
             </div>
           ))}
         </div>
