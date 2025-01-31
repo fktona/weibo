@@ -200,7 +200,7 @@ function HeroSection() {
             target="_blank"
             className="lg:px-6 px-3 py-4 lg:text-[17px] text-[14px] font-inter border border-white rounded-full  hover:bg-white/10 transition-colors"
           >
-            Explore the AI Space
+            RUI on Weibo
           </a>
         </motion.div>
         {/* <div className="absolute font-inter bottom-0 left-0 max-w-6xl overflow-x-auto gap-3 mx-auto w-full right-0 flex justify-between mb-8">
@@ -423,7 +423,7 @@ function IntegrationSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Rui
+          Weibo
           <Image
             src="/eye.svg"
             alt="About Preview"
