@@ -30,10 +30,10 @@ export default function Home() {
 }
 
 const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#docs", label: "Documentation" },
-  { href: "#token", label: "Tokenomics" },
-  { href: "#integrate", label: "Integrate" },
+  { href: "#about", label: "About", trans: "关于" },
+  { href: "#docs", label: "Documentation", trans: "文档" },
+  { href: "#token", label: "Tokenomics", trans: "代币经济学" },
+  { href: "#integrate", label: "Integrate", trans: "整合" },
 ];
 
 function Header() {
@@ -61,9 +61,10 @@ function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="hover:text-blue-400 transition-colors"
+              className="hover:text-blue-400 flex flex-col items-center  transition-colors"
             >
               {item.label}
+              <span className="text-sm">({item.trans})</span>
             </Link>
           ))}
         </nav>
@@ -71,7 +72,7 @@ function Header() {
         <div className="flex items-center gap-4">
           <button className="px-4 py-2 hidden md:block bg-[#EA8010] text-white rounded-full hover:bg-[#EA8010]/90 transition-colors">
             <a href="https://gitee.com/RUI25/rui" target="_blank">
-              Get Started
+              Get Started <span className="text-sm">(开始使用)</span>
             </a>
           </button>
 
@@ -110,14 +111,18 @@ function Header() {
               >
                 <Link
                   href={item.href}
-                  className="text-2xl font-semibold hover:text-blue-400  transition-colors py-4"
+                  className="text-2xl font-semibold flex flex-col items-center hover:text-blue-400  transition-colors py-4"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
+
+                  <span className="text-sm">({item.trans})</span>
                 </Link>
               </motion.div>
             ))}
-            <motion.button
+            <motion.a
+              href="https://gitee.com/RUI25/rui"
+              target="_blank"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -125,10 +130,8 @@ function Header() {
               className="mt-8 px-6 py-3 bg-[#EA8010] text-white rounded-full hover:bg-[#EA8010]/90 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              <a href="https://gitee.com/RUI25/rui" target="_blank">
-                Get Started
-              </a>
-            </motion.button>
+              Get Started
+            </motion.a>
           </motion.nav>
         )}
       </AnimatePresence>
@@ -183,14 +186,19 @@ function HeroSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <button className="lg:px-6 px-3 py-4 lg:text-[17px] font-inter text-[14px] bg-[#EA8010] text-white rounded-full hover:bg-[#EA8010]/90 transition-colors">
-            <a href="#about">Learn More</a>
-          </button>
-          <button className="lg:px-6 px-3 py-4 lg:text-[17px] text-[14px] font-inter border border-white rounded-full  hover:bg-white/10 transition-colors">
-            <a href="https://gitee.com/RUI25/rui" target="_blank">
-              Explore the AI Space
-            </a>
-          </button>
+          <a
+            href="#about"
+            className="lg:px-6 px-3 py-4 lg:text-[17px] font-inter text-[14px] bg-[#EA8010] text-white rounded-full hover:bg-[#EA8010]/90 transition-colors"
+          >
+            Learn More
+          </a>
+          <a
+            href="https://weibo.com/u/7977880057"
+            target="_blank"
+            className="lg:px-6 px-3 py-4 lg:text-[17px] text-[14px] font-inter border border-white rounded-full  hover:bg-white/10 transition-colors"
+          >
+            Explore the AI Space
+          </a>
         </motion.div>
         {/* <div className="absolute font-inter bottom-0 left-0 max-w-6xl overflow-x-auto gap-3 mx-auto w-full right-0 flex justify-between mb-8">
           {["automation", "scripting", "posting", "translating"].map(
@@ -275,14 +283,16 @@ function AboutSection() {
             </small>
           </motion.p>
 
-          <motion.button
+          <motion.a
+            href="https://weibo.com/u/7977880057"
+            target="_blank"
             className="px-6 py-3 w-fit lg:hidden border font-semibold mb-32 border-white rounded-full hover:bg-white/80 bg-white text-black  transition-colors"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             Learn more (了解更多)
-          </motion.button>
+          </motion.a>
           <div className="grid  grid-cols-2 gap-2 w-full max-w-[453px]">
             {Array(4)
               .fill(null)
@@ -320,14 +330,16 @@ function AboutSection() {
               ))}
           </div>
         </div>
-        <motion.button
-          className="px-6 py-3 border hidden lg:block font-semibold mb-32 border-white rounded-full hover:bg-white/80 bg-white text-black  transition-colors"
+        <motion.a
+          href="https://weibo.com/u/7977880057"
+          target="_blank"
+          className="px-6 py-3 border w-fit hidden lg:block font-semibold mb-32 border-white rounded-full hover:bg-white/80 bg-white text-black  transition-colors"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           Learn more (了解更多)
-        </motion.button>
+        </motion.a>
         <div className="lg:max-w-[50%] hidden lg:block max-w-[100%] lg:h-[50%] -z-10 absolute left-0 bottom-0">
           <Image
             src="/img4.png"
@@ -382,15 +394,15 @@ function IntegrationSection() {
         </small>
       </motion.p>
       <div className="flex items-center relative z-20 justify-center gap-6">
-        <motion.button
+        <motion.a
+          href="https://gitee.com/RUI25/rui"
+          target="_blank"
           className="px-8 py-3  text-[18px] flex items-center justify-center gap-2 rounded-full hover:bg-white/80  bg-white text-black transition-colors"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <a href="https://gitee.com/RUI25/rui" target="_blank">
-            Integrate
-          </a>
+          Integrate
           <Image
             src="/gg.svg"
             alt="About Preview"
@@ -399,16 +411,16 @@ function IntegrationSection() {
             height={20}
             className=""
           />
-        </motion.button>
-        <motion.button
+        </motion.a>
+        <motion.a
+          href="https://weibo.com/u/7977880057"
+          target="_blank"
           className="px-8 py-3  text-[18px] flex items-center justify-center gap-2 rounded-full hover:bg-white/80  bg-white text-black transition-colors"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <a href="https://gitee.com/RUI25/rui" target="_blank">
-            Webio
-          </a>
+          Webio
           <Image
             src="/eye.svg"
             alt="About Preview"
@@ -417,7 +429,7 @@ function IntegrationSection() {
             height={20}
             className=""
           />
-        </motion.button>
+        </motion.a>
       </div>
       <div className="w-full full relative  max-w-6xl mx-auto mt-[60px] rounded-[25px]">
         <Image
@@ -432,21 +444,21 @@ function IntegrationSection() {
           {[
             {
               img: "c1.png",
-              title: "Train the Model with Deepseek",
-              desc: "Fine-tune the AI to engage in Mandarin discussions on Weibo.",
+              title: "Train the Model with Deepseek(使用 Deepseek 训练模型)",
+              desc: "Fine-tune the AI to engage in Mandarin discussions on Weibo.(微调人工智能以在微博上进行普通话讨论。)",
             },
             {
               img: "c2.png",
-              title: "Set Up Weibo API Access",
-              desc: "Use the official API for seamless posting and interaction..",
+              title: "Set Up Weibo API Access(设置微博 API 访问)",
+              desc: "Use the official API for seamless posting and interaction.(使用官方API进行无缝发布和交互。)",
             },
             {
               img: "c3.png",
-              title: "Deploy on Gitee",
-              desc: "Open-source the deployment method, ensuring accessibility for developers.",
+              title: "Deploy on Gitee(部署在Gitee上)",
+              desc: "Open-source the deployment method, ensuring accessibility for developers. (开源部署方法，确保开发者可访问性)",
             },
           ].map((item, i) => (
-            <div className="px-5 rounded-xl max-w-[338px] bg-[#D9D9D914] min-h-[400px] p-4 backdrop-blur-lg justify-between flex flex-col items-center gap-2">
+            <div className="px-5 rounded-xl max-w-[338px] bg-[#D9D9D914] min-h-[430px] p-4 backdrop-blur-lg justify-between flex flex-col items-center gap-2">
               <Image
                 key={i}
                 src={`/${item.img}`}
@@ -455,10 +467,12 @@ function IntegrationSection() {
                 height={1080}
                 className=" h-[197px]  object-contain "
               />
-              <p className="font-semibold font-inter text-[30px]">
+              <p className="font-semibold font-inter leading-[36px] text-[27px]">
                 {item.title}
               </p>
-              <p className="text-sm lg:text-[18px] font-neue">{item.desc}</p>
+              <p className="text-sm lg:text-[16px] leading-[21px] font-neue">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -479,7 +493,7 @@ function DocumentationSection() {
     >
       <div className=" max-w-6xl mx-auto flex flex-col items-center ">
         <button className="px-10 py-3 border border-white rounded-full mb-2  w-fit hover:bg-white/10 transition-colors">
-          Easy
+          Easy (简单的)
         </button>
         <motion.h2
           className="text-[30px] font-medium mb-6 text-center"
@@ -510,24 +524,24 @@ function DocumentationSection() {
           >
             {[
               {
-                title: "AI Development",
+                title: "AI Development(人工智能开发)",
                 content: [
-                  "Built with Deepseek, trained to understand and engage in trending Weibo discussions.",
-                  `Built with Deepseek, trained to understand and engage in trending Weibo discussions. Specialized in Web3 discourse, making it a unique AI-driven knowledge source.`,
+                  "Built with Deepseek, trained to understand and engage in trending Weibo discussions.(使用 Deepseek 构建，经过培训可以理解并参与热门微博讨论。)",
+                  `Built with Deepseek, trained to understand and engage in trending Weibo discussions. Specialized in Web3 discourse, making it a unique AI-driven knowledge source.(使用 Deepseek 构建，经过培训可以理解并参与热门微博讨论。专注于Web3话语，使其成为独特的人工智能驱动的知识源)`,
                 ],
               },
               {
-                title: "Weibo API Integration",
+                title: "Weibo API Integration(微博API集成)",
                 content: [
-                  "Utilizes Sina Weibo’s API for real-time interactions and automated responses.",
-                  `Designed to respond dynamically to trending topics.`,
+                  "Utilizes Sina Weibo’s API for real-time interactions and automated responses.(利用新浪微博的 API 进行实时交互和自动响应。)",
+                  `Designed to respond dynamically to trending topics.(旨在动态响应热门话题。)`,
                 ],
               },
               {
-                title: "Open-Source Framework",
+                title: "Open-Source Framework(开源框架)",
                 content: [
-                  "All development and deployment resources are available on Gitee.",
-                  `Step-by-step guides in Mandarin with English translations.`,
+                  "All development and deployment resources are available on Gitee.(所有开发和部署资源都可以在 Gitee 上获取。)",
+                  `(Step-by-step guides in Mandarin with English translations.(普通话分步指南，附有英文翻译。)`,
                 ],
               },
             ].map((item, index) => (
@@ -535,17 +549,21 @@ function DocumentationSection() {
                 key={index}
                 className="text-black p-4 rounded-[25px]  bg-[#D9D9D985] mb-3"
               >
-                <h3 className="font-bold mb-34 text-[22.5px]">{item.title}</h3>
-                <ul className="text-[20px] font-[400] mb-3 list-disc ml-3">
+                <h3 className="font-bold mb-34 text-[22.5px] leading-[36px]">
+                  {item.title}
+                </h3>
+                <ul className="text-[20px] font-[400]  mb-3 list-disc ml-3">
                   {item.content.map((text, i) => (
-                    <li key={i}>{text}</li>
+                    <li key={i} className="leading-[21px] my-2">
+                      {text}
+                    </li>
                   ))}
                 </ul>
               </div>
             ))}
           </motion.div>
           <motion.div
-            className=" min-w-[520px] md:h-full h-[50vh] col-span-1  backdrop-blur-lg rounded-[25px] object-cover"
+            className="md:min-w-[437px] min-w-[379px] md:h-[573px] h-[50vh] col-span-1  backdrop-blur-lg relative rounded-[25px] object-cover"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -556,6 +574,24 @@ function DocumentationSection() {
               fill
               className="object-contain w-full h-full"
             />
+            <motion.a
+              href="https://gitee.com/RUI25/rui"
+              target="_blank"
+              className="px-8 py-3  absolute bottom-3  md:right-3 right-16 text-[18px] flex items-center justify-center gap-2 rounded-full hover:bg-white/80  bg-white text-black transition-colors"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Integrate
+              <Image
+                src="/gg.svg"
+                alt="About Preview"
+                layout="responsive"
+                width={20}
+                height={20}
+                className=""
+              />
+            </motion.a>
           </motion.div>
         </div>
       </div>
@@ -730,7 +766,7 @@ function Footer() {
     <footer className="font-inter py-10  absolute bottom-6 w-full px-4  backdrop-grayscale-0 ">
       <div className="max-w-7xl mx-auto flex mdjustify-between flex-col-reverse gap-3  md:flex-row justify-center items-center">
         <p className=" text-white/70 font-inter">
-          © (RUI) {new Date().getFullYear()}. all right reserved
+          © (RUI) {new Date().getFullYear()}. all right reserved (保留所有权利)
         </p>
         <div className="flex items-center gap-4">
           <Link
