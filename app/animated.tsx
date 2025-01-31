@@ -24,9 +24,12 @@ const messages = {
       "The team is focused on developing cutting-edge AI agents optimized for Chinese social media, leveraging DeepSeek to enhance both user-specific sentiment recognition and real-time engagement models unique to Weibo's network.",
     teamAllocationDesc3Title3: "Technical Description of Tokenomics:",
     teamAllocationDesc3:
-      "The allocation design ensures maximum public participation while maintaining a reserve for critical operational needs. On-Chain Transparency: All allocations, including the treasury and team vesting, will be enforced through verifiable on-chain transactions to foster trust and accountability.",
-    teamAllocationDesc4Title4: "Utility-Driven Demand:",
+      "The allocation design ensures maximum public participation while maintaining a reserve for critical operational needs.",
+    teamAllocationDesc4Title4: "On-Chain Transparency:",
     teamAllocationDesc4:
+      "  All allocations, including the treasury and team vesting, will be enforced through verifiable on-chain transactions to foster trust and accountability.",
+    teamAllocationDesc4Title5: "Utility-Driven Demand:",
+    teamAllocationDesc5:
       "The token acts as a utility layer, enabling users to access and deploy AI-driven agents capable of analyzing large-scale Weibo interactions with regional linguistic precision.",
     treasury: "6% Treasury (Locked, Vested):",
     treasuryDesc1:
@@ -59,9 +62,12 @@ const messages = {
       "团队专注于开发为中国社交媒体优化的尖端AI代理，利用DeepSeek来增强用户特定的情感识别和独特于微博网络的实时参与模型。",
     teamAllocationDesc3Title3: "代币经济学技术描述：",
     teamAllocationDesc3:
-      "分配设计确保最大程度的公众参与，同时为关键运营需求保留储备。链上透明度：所有分配，包括国库和团队归属，将通过可验证的链上交易强制执行，以培养信任和问责制。",
-    teamAllocationDesc4Title4: "实用驱动需求：",
+      "分配设计确保最大程度的公众参与，同时为关键运营需求保留储备。",
+    teamAllocationDesc4Title4: "链上透明度：",
     teamAllocationDesc4:
+      "  所有分配，包括国库和团队归属，将通过可验证的链上交易强制执行，以培养信任和问责制。",
+    teamAllocationDesc4Title5: "实用驱动需求：",
+    teamAllocationDesc5:
       "该代币作为一个实用层，使用户能够访问和部署能够分析大规模微博互动的AI驱动代理，具有区域语言精确性。",
     treasury: "6% 国库（锁定，归属）：",
     treasuryDesc1:
@@ -247,6 +253,12 @@ function TokenomicsSections() {
                               <FormattedMessage id="teamAllocationDesc4Title4" />
                             </span>
                             <FormattedMessage id="teamAllocationDesc4" />
+                          </p>
+                          <p>
+                            <span className="font-semibold mr-1">
+                              <FormattedMessage id="teamAllocationDesc4Title5" />
+                            </span>
+                            <FormattedMessage id="teamAllocationDesc5" />
                           </p>
                         </div>
                       </>
