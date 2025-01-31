@@ -1,0 +1,26 @@
+[
+  {
+    "chart": "/chart.svg"
+  },
+  {
+    "label": "92% Liquidity Pool (Public Supply)",
+    "value": "92% 流动资金池（公共供应）",
+    "color": "#3983FF",
+    "content": "The majority of the token supply will be allocated directly to a decentralized liquidity pool, ensuring accessibility and decentralization from the outset. This allocation emphasizes our commitment to public ownership and aligns with the decentralized ethos of open-source development.\n\nThis ensures that AI agent integrations with Weibo’s APIs and developer-oriented natural language processing tools remain accessible to the broader community. A portion of the liquidity pool may be earmarked for AI-driven engagement campaigns and further innovation for AI-enhancement agents across China’s most influential social media platform.\n\nUsers’ participation in the token liquidity pool will directly impact the ecosystem’s growth, ensuring robust and healthy adoption among end-user projects.",
+    "content_cn": "大部分代币供应将直接分配到去中心化流动资金池，确保从一开始就具有可访问性和去中心化。这种分配强调了我们对公众所有权的承诺，并符合开源开发的去中心化精神。\n\n这确保了 AI 代理集成 Weibo API 和面向开发者的自然语言处理工具仍然可以被更广泛的社区访问。流动性池的一部分可能会被指定用于 AI 驱动的互动活动和在中国最有影响力的社交媒体平台上的 AI 增强代理的进一步创新。\n\n用户对代币流动性池的参与将直接影响生态系统的增长，确保最终用户项目的稳健和健康采用。"
+  },
+  {
+    "label": "6% Treasury (Locked, Vested)",
+    "value": "6% 国库（锁定，授予）",
+    "color": "#EA8010",
+    "content": "The treasury supply will serve as a reserve for the framework’s long-term sustainability, locked and vested over 12 months with a 1-month cliff. These tokens will fund critical ecosystem needs, including:\n\n- Technical Enhancements\n- Partnerships\n- Localization\n\nThis structure ensures sustainability of AI framework development and support, enabling Weibo’s AI-driven ecosystem to evolve alongside technological advancements and community needs.",
+    "content_cn": "国库供应将作为框架长期可持续性的储备，锁定并在 12 个月内授予，并设有 1 个月的悬崖期。这些代币将用于资助关键的生态系统需求，包括：\n\n- 技术增强\n- 合作伙伴关系\n- 本地化\n\n这一结构确保了 AI 框架开发和支持的可持续性，使 Weibo 的 AI 驱动生态系统能够随着技术进步和社区需求的发展而演进。"
+  },
+  {
+    "label": "2% Team Allocation",
+    "value": "2% 团队分配",
+    "color": "#FF5733",
+    "content": "To incentivize the continued innovation and stewardship of the framework, 2% of the token supply will be allocated to the team. This allocation reflects minimal dilution and long-term commitment to the product's success.\n\nPurpose: The team is focused on developing cutting-edge AI agents optimized for Chinese social media, leveraging DeepSeek to enhance both user-specific sentiment recognition and real-time engagement models unique to Weibo’s network.\n\nTechnical Description of Tokenomics:\nThe allocation design ensures maximum public participation while maintaining a reserve for critical operational needs.\n\nOn-Chain Transparency: All allocations, including the treasury and team vesting, will be enforced through verifiable on-chain transactions to foster trust and accountability.\n\nUtility-Driven Demand: The token acts as a utility layer, enabling users to access and deploy AI-driven agents capable of analyzing large-scale Weibo interactions with regional linguistic precision.",
+    "content_cn": "为了激励框架的持续创新和管理，2% 的代币供应将分配给团队。这种分配体现了最低程度的稀释以及对产品成功的长期承诺。\n\n目的：团队专注于开发针对中国社交媒体优化的前沿 AI 代理，利用 DeepSeek 增强用户特定的情感识别和独特于微博网络的实时互动模型。\n\n代币经济学的技术描述：\n分配设计确保最大程度的公众参与，同时保留关键运营需求的储备。\n\n链上透明度：所有分配，包括国库和团队授予，都将通过可验证的链上交易强制执行，以促进信任和责任感。\n\n实用性驱动的需求：该代币充当实用层，使用户能够访问和部署能够以区域语言精确分析大规模微博互动的 AI 代理。"
+  }
+]
