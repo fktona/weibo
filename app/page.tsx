@@ -468,7 +468,10 @@ function IntegrationSection() {
                 alt="Integration Preview"
                 width={1920}
                 height={1080}
-                className=" h-[197px]  object-contain "
+                className={cn(
+                  " h-[197px]  object-cover ",
+                  i == 0 && "object-contain"
+                )}
               />
               <p className="font-semibold font-inter leading-[36px] grow text-[27px]">
                 {item.title}
@@ -703,7 +706,7 @@ function TokenomicsSection() {
       <section
         id="token"
         ref={ref}
-        className="py-20 isolate md:min-h-[1665px] min-h-[350vh]  px-4 relative max-w-7xl mx-auto"
+        className="py-20 isolate md:min-h-[1865px] min-h-[350vh]  px-4 relative max-w-7xl mx-auto"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
