@@ -703,7 +703,7 @@ function TokenomicsSection() {
       <section
         id="token"
         ref={ref}
-        className="py-20 isolate min-h-[1665px] px-4 relative max-w-7xl mx-auto"
+        className="py-20 isolate md:min-h-[1665px] min-h-[350vh]  px-4 relative max-w-7xl mx-auto"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -717,7 +717,7 @@ function TokenomicsSection() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="w-full h-full flex items-center justify-center relative max-w-[550px] max-h-[600px]">
+            <div className="w-full h-full min-h-[652px] flex items-center justify-center relative max-w-[550px] max-h-[600px]">
               <Image
                 src="/chart.svg"
                 alt="Tokenomics Preview"
@@ -739,7 +739,7 @@ function TokenomicsSection() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={language}
-                className="flex flex-col items-start lg:gap-4 gap-2"
+                className="flex flex-col h-full items-start lg:gap-4 gap-2"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
