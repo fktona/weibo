@@ -81,7 +81,7 @@ const messages = {
 const AnimatedCard = ({ children, isHovered, language }) => {
   return (
     <motion.div
-      className="h-full p-4 flex items-center bg-white/15 rounded-[8px] min-h-[850px] backdrop-blur-lg overflow-hidden"
+      className="h-full p-4 flex items-center bg-white/15 rounded-[8px] md:min-h-[850px] min-h-[650px] backdrop-blur-lg overflow-hidden"
       style={{ transform: "rotate(0deg)" }}
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -137,7 +137,7 @@ function TokenomicsSections() {
       <section
         id="token"
         ref={ref}
-        className="py-20 isolate md:min-h-[1865px] min-h-[350vh] px-4 relative max-w-screen-2xl lg:px-[110px] mx-auto"
+        className="py-20 isolate md:min-h-[1865px] min-h-[350vh]  relative max-w-screen-2xl lg:px-[110px] mx-auto"
       >
         <h1 className="font-bold text-[46px] leading-[55px] font-neue text-start my-10">
           Tokenomics
@@ -149,7 +149,7 @@ function TokenomicsSections() {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="h-full p-4 flex items-center bg-white/15 rounded-[8px] min-h-[850px] backdrop-blur-lg overflow-hidden">
+            <div className="h-full p-4 flex items-center md:bg-white/15 rounded-[8px] md:min-h-[850px] min-h-[650px] backdrop-blur-lg overflow-hidden">
               <div className="w-full h-full min-h-[652px] flex items-center justify-center relative max-w-[550px] max-h-[600px]">
                 <Image
                   src="/chart.svg"
@@ -188,9 +188,9 @@ function TokenomicsSections() {
                     {index === 0 && (
                       <>
                         <div className="flex justify-start lg:text-[30px] text-[18px] gap-2">
-                          <div className="font-medium flex items-center justify-center gap-2">
+                          <div className="font-medium flex px-2 lg:px-0 items-center justify-center gap-2">
                             <div
-                              className="lg:w-5 lg:h-7 w-4 h-5 text-[30px] rounded-full lg:relative absolute -left-2 lg:left-0"
+                              className="lg:w-5 lg:h-7 w-4 h-5 text-[30px]   rounded-full lg:relative absolute left-1 lg:left-0"
                               style={{ backgroundColor: "#3983FF" }}
                             />
                             <FormattedMessage id="liquidityPool" />
@@ -218,9 +218,9 @@ function TokenomicsSections() {
                     {index === 1 && (
                       <>
                         <div className="flex justify-start lg:text-[30px] text-[18px] gap-2">
-                          <div className="font-medium flex items-center justify-center gap-2">
+                          <div className="font-medium flex items-center px-2 lg:px-0 justify-center gap-2">
                             <div
-                              className="lg:w-5 lg:h-7 w-4 h-5 text-[30px] rounded-full lg:relative absolute -left-2 lg:left-0"
+                              className="lg:w-5 lg:h-7 w-4 h-5 text-[30px]  left-1  rounded-full lg:relative absolute  lg:left-0"
                               style={{ backgroundColor: "white" }}
                             />
                             <FormattedMessage id="teamAllocation" />
@@ -254,9 +254,9 @@ function TokenomicsSections() {
                     {index === 2 && (
                       <>
                         <div className="flex justify-start lg:text-[30px] text-[18px] gap-2">
-                          <div className="font-medium flex items-center justify-center gap-2">
+                          <div className="font-medium flex items-center  px-2 lg:px-0 justify-center gap-2">
                             <div
-                              className="lg:w-5 lg:h-7 w-4 h-5 text-[30px] rounded-full lg:relative absolute -left-2 lg:left-0"
+                              className="lg:w-5 lg:h-7 w-4 h-5 text-[30px] rounded-full left-1  lg:relative absolute  lg:left-0"
                               style={{ backgroundColor: "#EA8010" }}
                             />
                             <FormattedMessage id="treasury" />
