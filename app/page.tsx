@@ -200,7 +200,7 @@ function HeroSection() {
             target="_blank"
             className="lg:px-6 px-3 py-4 lg:text-[17px] text-[14px] font-inter border border-white rounded-full  hover:bg-white/10 transition-colors"
           >
-            RUI on Weibo
+            Rui on Weibo
           </a>
         </motion.div>
         {/* <div className="absolute font-inter bottom-0 left-0 max-w-6xl overflow-x-auto gap-3 mx-auto w-full right-0 flex justify-between mb-8">
